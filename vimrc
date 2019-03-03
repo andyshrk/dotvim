@@ -5,8 +5,10 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 call plug#end()
 
+let g:gutentags_add_default_project_roots = 0
+
 " gutentags搜索工程目录的标志，碰到这些文件/目录名就停止向上一级目录递归 "
-let g:gutentags_project_root = ['.git']
+let g:gutentags_project_root = ['.root']
 
 " " 所生成的数据文件的名称 "
 let g:gutentags_ctags_tagfile = '.tags'
@@ -38,7 +40,7 @@ inoremap <C-l> <Right>
 " search word under cursor, the pattern is treated as regex, and enter normal
 " mode directly
 noremap <C-F> :<C-U><C-R>=printf("Leaderf rg -e %s ", expand("<cword>"))<CR>
-highlight  Lf_hl_rgHighlight guifg=#000000 guibg=#CCCC66 ctermfg=green ctermbg=185
+highlight Lf_hl_rgHighlight guifg=#000000 guibg=#CCCC66 ctermfg=green ctermbg=185
 highlight Lf_hl_match gui=bold guifg=Blue cterm=bold ctermfg=green
 highlight Lf_hl_match0 gui=bold guifg=Blue cterm=bold ctermfg=green
 highlight Lf_hl_match1 gui=bold guifg=Blue cterm=bold ctermfg=green

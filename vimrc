@@ -24,6 +24,11 @@ if isdirectory("kernel/") && isdirectory("mm/")
     let g:gutentags_file_list_command = 'find arch/arm* arch/riscv block crypto drivers fs include init ipc kernel lib mm net security sound virt'
 endif
 
+" for rt-thread project
+if isdirectory("libcpu/") && isdirectory("bsp/")
+    let g:gutentags_file_list_command = 'find include libcpu src components examples bsp/rockchip* '
+endif
+
 " 检测 ~/.cache/tags 不存在就新建 "
 if !isdirectory(s:vim_tags)
     silent! call mkdir(s:vim_tags, 'p')

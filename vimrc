@@ -11,7 +11,7 @@ set t_ti= t_te=
 let g:gutentags_add_default_project_roots = 0
 
 " gutentags搜索工程目录的标志，碰到这些文件/目录名就停止向上一级目录递归 "
-let g:gutentags_project_root = ['.root']
+let g:gutentags_project_root = ['.ctags']
 
 " " 所生成的数据文件的名称 "
 let g:gutentags_ctags_tagfile = '.tags'

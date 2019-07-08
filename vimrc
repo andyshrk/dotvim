@@ -5,6 +5,9 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 call plug#end()
 
+" no clear screen when exit vim
+set t_ti= t_te=
+
 let g:gutentags_add_default_project_roots = 0
 
 " gutentags搜索工程目录的标志，碰到这些文件/目录名就停止向上一级目录递归 "

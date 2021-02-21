@@ -3,6 +3,7 @@
 noremap <C-F> :<C-U><C-R>=printf("Leaderf rg -e %s ", expand("<cword>"))<CR>
 
 noremap <C-R> :LeaderfMruCwd<CR>
+noremap <leader>ff :LeaderfFunction<CR>
 
 highlight Lf_hl_rgHighlight guifg=#000000 guibg=#CCCC66 ctermfg=green ctermbg=185
 highlight Lf_hl_match gui=bold guifg=Blue cterm=bold ctermfg=green
